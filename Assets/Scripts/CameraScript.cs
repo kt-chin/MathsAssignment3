@@ -72,27 +72,27 @@ public class CameraScript: MonoBehaviour {
 
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.right* speed);
+            transform.Translate(Vector3.right* speed * Time.deltaTime);
         }
         else if(Input.GetKey(KeyCode.A))
         {
-            transform.Translate(Vector3.left *speed);
+            transform.Translate(Vector3.left *speed * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.W))
         {
-            transform.Translate(Vector3.forward * speed);
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.S))
         {
-            transform.Translate(Vector3.back * speed);
+            transform.Translate(Vector3.back * speed * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.E))
         {
-            transform.Translate(new Vector3(0.0f, 1.0f, 0.0f)*speed);
+            transform.Translate(new Vector3(0.0f, 1.0f, 0.0f)*speed * Time.deltaTime);
         }
         else if (Input.GetKey(KeyCode.Q))
         {
-            transform.Translate(new Vector3(0.0f, -1.0f, 0.0f) * speed);
+            transform.Translate(new Vector3(0.0f, -1.0f, 0.0f) * speed * Time.deltaTime);
         }
 
         if (toggledMouse)
