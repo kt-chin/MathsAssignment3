@@ -424,7 +424,6 @@ public class BoatPhysics : MonoBehaviour {
 
                 Vector3 J_H = LJ_H + L;
 
-
                 //Create the triangle
                 AddCoordinateToMesh(L);
                 AddCoordinateToMesh(J_H);
@@ -441,16 +440,12 @@ public class BoatPhysics : MonoBehaviour {
             {
                 continue;
             }
-           
-           
-
 
         }
         //Generate the final underwater mesh
         UnderWaterMesh.Clear();
         UnderWaterMesh.name = "Underwater Mesh";
         UnderWaterMesh.vertices = underwaterVertices.ToArray();
-        //UnderWaterMesh.uv = uvs.ToArray();
         UnderWaterMesh.triangles = underwaterTriangles.ToArray();
 
         //Ensure the bounding volume is correct
